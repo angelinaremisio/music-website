@@ -1,16 +1,378 @@
-<html>
+<html lang="en">
 <head>
 <title>Music App</title>
 </head>
 
-<h1>I HATE SPOTIFY</h1>
-<img src="spotify.png", alt="I HATE SPOTIFY">
+<style>
 
-<body>
+:root {
+    --disabled: #405991;
+}
 
-<a href="KPop Demon Hunters/kpop demon hunters.html">
-<button type="button">KPop Demon Hunters Soundtrack</button> 
-</a>
+* {
+    font-family:sans-serif;
+}
 
+#loop_button {
+    visibility: hidden;
+}
+
+.function_button {
+    background-color: var(--disabled);
+    color: white;
+    width: 100px;
+    height: 55px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 2px;
+    transition: width 0.3s;
+}
+
+.function_button:hover {
+    width: 105px;
+    height: 60px;
+    font-size: 17.5;
+    transition: 0.3s;
+}
+
+div {
+    border: 3px solid lightgrey;
+    border-radius: 20px;
+    background-color: lightgrey;
+    padding: 25px;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+    font-size: 16;
+    vertical-align: top;
+    display: none;
+    animation: fadeIn 0.1s linear;
+}
+
+@keyframes fadeIn {
+    0% {
+        font-size: 15;
+        width: 285px;
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+.album {
+    width: 250px;
+    height: 100px;
+    background-color:lightgrey;
+    border: 2px solid lightgrey;
+    border-radius: 20px;
+    box-sizing: border-box; /* borders are included in overall box size */
+    padding: 20px;
+    margin: 5px; /* space between boxes of same class */
+    vertical-align: top; /* keeps the blocks in line */
+    font-size: 16;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.album:hover {
+    width: 275px;
+    height: 125px;
+    font-size: 20;
+    transition: 0.5s;
+}
+
+</style>
+
+<!-- make an easier way to import all these scripts -->
+<script src="js_scripts/pausePlay.js"></script>
+<script src="js_scripts/shuffle.js"></script>
+<script src="js_scripts/enable_loop.js"></script>
+<script src="js_scripts/check_loop.js"></script>
+<script src="js_scripts/play_next_song.js"></script>
+<script src="js_scripts/show_songs.js"></script>
+
+<h1 style="color:white;">
+    I HATE SPOTIFY
+    <img src="spotify-modified.png" alt="I HATE SPOTIFY" style="float:right;width:150px;,height:150px;">
+</h1>
+
+
+<button id="shuffle_button" type="button" class="function_button" onclick="press_shuffle()">shuffle</button>
+<button id="loop_button" type="button" class="function_button" onclick="enable_loop()">loop</button>
+<br>
+<br>
+
+<body style="background-color:#293d6b">
+<button type="button" class="album" onclick ="show_songs('KPop Demon Hunters (Soundtrack from the Netflix Film)')">KPop Demon Hunters (Soundtrack from the Netflix Film)</button>
+<button type="button" class="album" onclick ="show_songs('Since I Left You')">Since I Left You</button>
+<button type="button" class="album" onclick ="show_songs('The Sundown Realm')">The Sundown Realm</button>
+
+<!-- end of album buttons -->
+<br>
+
+<div id="KPop Demon Hunters (Soundtrack from the Netflix Film)">
+
+<p>01 - TAKEDOWN (JEONGYEON, JIHYO, CHAEYOUNG)</p>
+<audio controls>
+<source src="Albums/KPop Demon Hunters (Soundtrack from the Netflix Film)/01 - TAKEDOWN (JEONGYEON, JIHYO, CHAEYOUNG).mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>02 - How It’s Done</p>
+<audio controls>
+<source src="Albums/KPop Demon Hunters (Soundtrack from the Netflix Film)/02 - How It’s Done.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>03 - Soda Po</p>
+<audio controls>
+<source src="Albums/KPop Demon Hunters (Soundtrack from the Netflix Film)/03 - Soda Pop.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>04 - Golden</p>
+<audio controls>
+<source src="Albums/KPop Demon Hunters (Soundtrack from the Netflix Film)/04 - Golden.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>05 - Strategy</p>
+<audio controls>
+<source src="Albums/KPop Demon Hunters (Soundtrack from the Netflix Film)/05 - Strategy.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>06 - Takedown</p>
+<audio controls>
+<source src="Albums/KPop Demon Hunters (Soundtrack from the Netflix Film)/06 - Takedown.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>07 - Your Idol</p>
+<audio controls>
+<source src="Albums/KPop Demon Hunters (Soundtrack from the Netflix Film)/07 - Your Idol.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>08 - Free</p>
+<audio controls>
+<source src="Albums/KPop Demon Hunters (Soundtrack from the Netflix Film)/08 - Free.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>09 - What It Sounds Like</p>
+<audio controls>
+<source src="Albums/KPop Demon Hunters (Soundtrack from the Netflix Film)/09 - What It Sounds Like.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>10 - 사랑인가 봐 Love, Maybe</p>
+<audio controls>
+<source src="Albums/KPop Demon Hunters (Soundtrack from the Netflix Film)/10 - 사랑인가 봐 Love, Maybe.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>11 - 오솔길 Path</p>
+<audio controls>
+<source src="Albums/KPop Demon Hunters (Soundtrack from the Netflix Film)/11 - 오솔길 Path.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>12 - Score Suite</p>
+<audio controls>
+<source src="Albums/KPop Demon Hunters (Soundtrack from the Netflix Film)/12 - Score Suite.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+</div>
+
+<div id="Since I Left You">
+
+<p>01 - Since I Left You</p>
+<audio controls>
+<source src="Albums/Since I Left You/01 - Since I Left You.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>02 - Stay Another Season</p>
+<audio controls>
+<source src="Albums/Since I Left You/02 - Stay Another Season.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>03 - Radio</p>
+<audio controls>
+<source src="Albums/Since I Left You/03 - Radio.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>04 - Two Hearts in 3-4 Time</p>
+<audio controls>
+<source src="Albums/Since I Left You/04 - Two Hearts in 3-4 Time.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>05 - Avalanche Rock</p>
+<audio controls>
+<source src="Albums/Since I Left You/05 - Avalanche Rock.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>06 - Flight Tonight</p>
+<audio controls>
+<source src="Albums/Since I Left You/06 - Flight Tonight.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>07 - Close to You</p>
+<audio controls>
+<source src="Albums/Since I Left You/07 - Close to You.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>08 - Diners Only</p>
+<audio controls>
+<source src="Albums/Since I Left You/08 - Diners Only.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>09 - A Different Feeling</p>
+<audio controls>
+<source src="Albums/Since I Left You/09 - A Different Feeling.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>10 - Electricity</p>
+<audio controls>
+<source src="Albums/Since I Left You/10 - Electricity.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>11 - Tonight May Have to Last Me All My Life</p>
+<audio controls>
+<source src="Albums/Since I Left You/11 - Tonight May Have to Last Me All My Life.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>12 - Pablo's Cruise</p>
+<audio controls>
+<source src="Albums/Since I Left You/12 - Pablo's Cruise.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>13 - Frontier Psychiatrist</p>
+<audio controls>
+<source src="Albums/Since I Left You/13 - Frontier Psychiatrist.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>14 - Etoh</p>
+<audio controls>
+<source src="Albums/Since I Left You/14 - Etoh.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>15 - Summer Crane</p>
+<audio controls>
+<source src="Albums/Since I Left You/15 - Summer Crane.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>16 - Little Journey</p>
+<audio controls>
+<source src="Albums/Since I Left You/16 - Little Journey.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>17 - Live at Dominoes</p>
+<audio controls>
+<source src="Albums/Since I Left You/17 - Live at Dominoes.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>18 - Extra Kings</p>
+<audio controls>
+<source src="Albums/Since I Left You/18 - Extra Kings.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+</div>
+
+<div id="The Sundown Realm">
+
+<p>01 - Sleep-Entrance</p>
+<audio controls>
+<source src="Albums/The Sundown Realm/01 - Sleep-Entrance.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>02 - A Moonlit Glade</p>
+<audio controls>
+<source src="Albums/The Sundown Realm/02 - A Moonlit Glade.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>03 - Whispers of the Wind-Xeros</p>
+<audio controls>
+<source src="Albums/The Sundown Realm/03 - Whispers of the Wind-Xeros.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>04 - Trick of the Light</p>
+<audio controls>
+<source src="Albums/The Sundown Realm/04 - Trick of the Light.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>05 - Shooting Stars Reflecting in the Water</p>
+<audio controls>
+<source src="Albums/The Sundown Realm/05 - Shooting Stars Reflecting in the Water.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>06 - The Lake of Plasma</p>
+<audio controls>
+<source src="Albums/The Sundown Realm/06 - The Lake of Plasma.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>07 - Procession of the Shangrae</p>
+<audio controls>
+<source src="Albums/The Sundown Realm/07 - Procession of the Shangrae.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>08 - The Garden of Eternal Symmetry</p>
+<audio controls>
+<source src="Albums/The Sundown Realm/08 - The Garden of Eternal Symmetry.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>09 - The Clock Inside the Great Oak (Forever Twilight)</p>
+<audio controls>
+<source src="Albums/The Sundown Realm/09 - The Clock Inside the Great Oak (Forever Twilight).mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>10 - Lucidity</p>
+<audio controls>
+<source src="Albums/The Sundown Realm/10 - Lucidity.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+<p>11 - _</p>
+<audio controls>
+<source src="Albums/The Sundown Realm/11 - _.mp3" type="audio/mpeg">
+</audio>
+<br>
+
+</div>
 </body>
 </html>
