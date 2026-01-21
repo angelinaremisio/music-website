@@ -1,0 +1,9 @@
+<div id="album title">
+
+<p>track number - song title</p>
+<audio controls>
+  <source src="album title folder/song name" type="audio/mpeg">
+</audio>
+<br>
+
+</div>
